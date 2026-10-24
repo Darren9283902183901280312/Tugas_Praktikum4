@@ -1,0 +1,464 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body h1{
+  font-family: arial, sans-serif;
+}
+
+main {
+  min-height: 400.5px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+/* Home */
+.home {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.home h1 {
+  font-size: 36px;
+}
+
+.halow {
+  font-family: Tahoma, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  line-height: 1.1;
+}
+
+.welcome {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.stickers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.stickers img {
+  object-fit: contain;
+  margin-bottom: 0px;
+}
+
+/* About */
+.About {
+  max-width: 550px;
+  margin: auto;
+  padding: 9.4px;
+}
+
+.identity-card {
+  padding: 20px;
+  border: 1px solid #d5d5d5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.identity-card h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.identity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.identity-item:last-child {
+  border-bottom: none;
+}
+
+.identity-item span {
+  font-weight: bold;
+}
+
+.identity-item p {
+  margin: 0;
+  text-align: right;
+}
+
+
+/* Contact */
+.contact-page {
+  max-width: 1400px;
+  margin: auto;
+  padding: 25px 20px 50px;
+  box-sizing: border-box;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.contact-info {
+  min-width: 0;
+}
+
+.contact-info h2 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #666666;
+  overflow-wrap: anywhere;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: #7da7ed;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Hobby */
+.hobby-layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+.hobby-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: start;
+}
+
+.hobby-sidebar h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.hobby-button {
+  display: block;
+  padding: 14px 18px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hobby-button:hover {
+  background: #f0f3f8;
+  transform: translateX(3px);
+}
+
+.hobby-button.active {
+  background: #e8eefb;
+  border-color: #347ff0;
+  font-weight: bold;
+}
+
+.hobby-content {
+  min-width: 0;
+}
+
+.hobby-content h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 25px;
+}
+
+.hobby-empty {
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.hobby-empty p{
+  text-align: justify;
+}
+
+.hobby-search {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.hobby-table-container {
+  width: 100%;
+  height: 205px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.hobby-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.hobby-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f3f3f3;
+}
+
+.hobby-table th,
+.hobby-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.hobby-table th:first-child,
+.hobby-table td:first-child {
+  width: 0px;
+  text-align: center;
+}
+
+.hobby-table tbody tr {
+  transition: background 0.2s;
+}
+
+.hobby-table tbody tr:hover {
+  background: #f5f7fa;
+}
+
+.hobby-table .no-results {
+  text-align: center;
+  padding: 25px;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.navbar a {
+  color: inherit;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 0px;
+  color: white;
+  font-family: monospace;
+}
+
+.footer1 svg {
+  display: block;
+  width: 100%;
+}
+
+.footer2 {
+  padding: 6px;
+  background: #347ff0;
+  text-align: center;
+}
+
+.footer2 p {
+  margin: 0px;
+  font-size: 14px;
+}
+
+/* Responsive Web */
+@media (max-width: 600px) {
+  .navbar {
+    gap: 16px;
+    padding: 14px 10px;
+  }
+  .navbar a {
+    font-size: 14px;
+  }
+  .home h1 {
+    font-size: 28px;
+  }
+  .welcome {
+    font-size: 19px;
+  }
+  .stickers {
+    gap: 15px;
+  }
+  .stickers img {
+    width: 130px;
+    height: 130px;
+  }
+  .About {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .identity-card {
+    padding: 18px;
+  }
+  .identity-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .identity-item p {
+    text-align: left;
+  }
+  .contact-page {
+    padding: 20px 12px 35px;
+  }
+  .contact-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .contact-card {
+    gap: 8px;
+    padding: 10px;
+  }
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .contact-info h2 {
+    font-size: 12px;
+  }
+  .contact-info p {
+    font-size: 11px;
+  }
+  .hobby-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 15px;
+  }
+  .hobby-sidebar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .hobby-sidebar h2 {
+    grid-column: 1 / -1;
+  }
+  .hobby-button {
+    text-align: center;
+    padding: 12px 6px;
+  }
+  .hobby-content h1 {
+    font-size: 26px;
+  }
+  .hobby-table th,
+  .hobby-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-card {
+    padding: 14px;
+  }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .contact-info h2 {
+    font-size: 14px;
+  }
+  .contact-info p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1000px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-card {
+    transition: none;
+  }
+}
